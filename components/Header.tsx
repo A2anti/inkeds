@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Header() { return <header className="site-header"><div className="nav-wrap"><Link className="wordmark" href="/">INKED<span>.</span></Link><nav><Link href="/styles">Styles & pricing</Link><Link href="/#artist">The artist</Link><Link href="/gallery">Gallery</Link><Link href="/#process">The process</Link></nav><Link className="button button-outline nav-cta" href="/#booking">Book a session <span>↗</span></Link></div></header>; }

@@ -1,0 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { gallery, photo } from '@/lib/data';
+export const metadata={title:'Gallery — INKED.'};
+export default function GalleryPage(){return <main><div className="container"><div className="page-hero"><p className="eyebrow">Selected inspiration</p><h1 className="page-title">Recent <em>work.</em></h1><p>A visual starting point for the work we can make together. Share your references when you book a consultation.</p></div><div className="gallery-grid">{gallery.map((g,i)=><div className="gallery-item" key={g.title}><Image src={photo(g.image)} alt={`${g.category} tattoo inspiration`} fill sizes="(max-width:620px) 50vw, 33vw"/><div><small>{g.category}</small><h3>{g.title}</h3></div></div>)}</div><section className="cta-band" style={{marginBottom:90}}><p className="eyebrow">Have an idea of your own?</p><h2>Let’s make it <em>personal.</em></h2><Link className="button button-primary" href="/#booking">Book a session ↗</Link></section></div></main>}
